@@ -68,11 +68,25 @@ html {
     animation-fill-mode: forwards;
 }
 
+.hamburger {
+    display: none;
+}
+
 .init-txt {
     height: 40rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.init-txt div h1 {
+    font-size: 7rem;
+    text-align: center;
+}
+
+.init-txt div p {
+    font-size: 5rem;
+    text-align: center;
 }
 
 @keyframes hov {
@@ -84,7 +98,7 @@ html {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     .head {
         width: 100vh;
         height: 60rem;
@@ -112,30 +126,44 @@ html {
         justify-content: space-between;
         align-items: center;
     }
-    .list ul {
+    .list {
+        display: none;
+    }
+    .active ul {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .list ul li {
+    .active ul li {
         list-style: none;
         margin: 0 1rem;
         padding: 1rem;
     }
-    .list ul li a {
+    .active ul li a {
         text-decoration: none;
         color: #fff;
     }
-    .list ul li a:hover {
+    .active ul li a:hover {
         text-decoration: none;
         animation-name: hov;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
+    }
+    .hamburger {
+        display: block;
     }
     .init-txt {
         height: 40rem;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .init-txt div h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .init-txt div p {
+        font-size: 2rem;
+        text-align: center;
     }
 }

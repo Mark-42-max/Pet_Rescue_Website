@@ -24,15 +24,16 @@
                     <li><a href="/">How it works</a></li>
                 </ul>
             </div>
-            <!-- <div>
-                <p>&#8801</p>
-            </div> -->
+            <div class="hamburger">
+                <p onclick="test()">&#8801</p>
+            </div>
         </nav>
+        <div id="menu"></div>
 
         <div class="init-txt">
             <div>
-                <h1 style="font-size: 7rem; text-align: center;">Pet Rescue</h1>
-                <p style="font-size: 5rem; text-align: center;">
+                <h1>Pet Rescue</h1>
+                <p>
                     Pet Rescue is a platform for pet lovers to find loving, caring, and responsible people to adopt their pets.
                 </p>
             </div>
@@ -41,6 +42,24 @@
 </body>
 
 <script>
+    var test = () => {
+        if (document.getElementById("menu").innerHTML === "") {
+            document.getElementById("menu").innerHTML = `
+            <div class="active">
+                <ul>
+                    <li><a href="/">Adoption</a></li>
+                    <li><a href="/">Community</a></li>
+                    <li><a href="/">Vet Guides</a></li>
+                    <li><a href="/">Inspiring Stories</a></li>
+                    <li><a href="/">How it works</a></li>
+                </ul>
+            </div>
+            `;
+        } else {
+            document.getElementById("menu").innerHTML = "";
+        }
+
+    }
 </script>
 
 </html>
