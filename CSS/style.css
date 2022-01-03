@@ -58,7 +58,11 @@ html {
 
 .list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: red;
+    display: inline-block;
+    width: 9vw;
+    height: 8vh;
+    text-align: center;
 }
 
 .list ul li a:hover {
@@ -91,10 +95,12 @@ html {
 
 @keyframes hov {
     0% {
-        color: #fff;
+        color: red;
     }
     100% {
-        color: red;
+        color: #fff;
+        background-color: red;
+        border-radius: 32px;
     }
 }
 
@@ -143,11 +149,8 @@ html {
         text-decoration: none;
         color: #fff;
     }
-    .active ul li a:hover {
-        text-decoration: none;
-        animation-name: hov;
-        animation-duration: 0.7s;
-        animation-fill-mode: forwards;
+    .active ul li a:active {
+        color: red;
     }
     .hamburger {
         display: block;
